@@ -37,6 +37,11 @@ AutoStartResources:
     - emergency
 
     - async
+    - simple-loading
+    - ply_automotoecole
+    - ply_docks
+    - ply_garages
+    - ply_prefecture
 
     - es_afterStart
     #GARDER ES_AFTERSTART DERNIER MERCI LEL
