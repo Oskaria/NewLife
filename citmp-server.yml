@@ -35,6 +35,9 @@ AutoStartResources:
     - ccreation
     - carwash
     - emergency
+
+    - async
+
     - es_afterStart
     #GARDER ES_AFTERSTART DERNIER MERCI LEL
 
