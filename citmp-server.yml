@@ -16,15 +16,14 @@ AutoStartResources:
     - es_admin
     - jobs-legal
     - truckerjob
-    #- pooljob
-    - es_garages
+    #- es_garages
     - es_weashop
     - jobs-police
     - vdk_call
     - salaire
     - banking
     - foodhud
-    #- lscustoms
+    - lscustoms
     - loadingscreen
     - tradeIlegal
     - interiors
@@ -34,9 +33,11 @@ AutoStartResources:
     - mine
     - Wrapper
     - ccreation
-    - Organe
     - carwash
     - emergency
+
+    - 
+
     - es_afterStart
     #GARDER ES_AFTERSTART DERNIER MERCI LEL
 

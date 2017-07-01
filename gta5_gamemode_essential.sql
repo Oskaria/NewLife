@@ -1,5 +1,8 @@
 SET FOREIGN_KEY_CHECKS=0;
 
+CREATE DATABASE gta5_gamemode_essential;
+USE gta5_gamemode_essential;
+
 -- ----------------------------
 -- Table structure for bans
 -- ----------------------------
