@@ -14,7 +14,7 @@ jobsname = {"Sans Emploi", "Nettoyeur de piscines", "Éboueur", "Mineur", "Chauf
 
 jobs = {
   {name="Sans Emploi", id=1},
-  {name="Nettoyeur de piscine", id=2},
+  --{name="Nettoyeur de piscine", id=2},
   {name="Éboueur", id=3},
   {name="Mineur", id=4},
   --{name="Chauffeur de taxi", id=5},
@@ -23,9 +23,9 @@ jobs = {
   {name="Livreur de conteneur", id=8},
   {name="Livreur de médicament", id=9},
   --{name="Policier", id=10},
-  {name="Fossoyeur", id=11},
-  {name="Préposé à la morgue", id=12},
-  {name="Ambulancier", id=13},
+  --{name="Fossoyeur", id=11},
+  --{name="Préposé à la morgue", id=12},
+  --{name="Ambulancier", id=13},
 }
 
 hair = {
@@ -61,11 +61,24 @@ OutfitsShop = {
   {name="Vêtements", colour=9, scale=0.9, id=73, x = 1696.5310058594, y = 4828.109375, z = 42.063121795654},
   {name="Vêtements", colour=9, scale=0.9, id=73, x = -162.85632324219, y = -303.03753662109, z = 39.733276367188},
   {name="Vêtements", colour=9, scale=0.9, id=73, x= 72.531211853027, y= -1396.3240966797, z= 29.376146316528},
+  {name="Vêtements", colour=5, scale=0.8, id=73, x= -826.98657226563, y= -1076.0622558594, z= 11.328109741211},
+  {name="Vêtements", colour=5, scale=0.8, id=73, x= -1193.8142089844, y= -772.68072509766, z= 17.324602127075},
+  {name="Vêtements", colour=5, scale=0.8, id=73, x= -709.95257568359, y= -153.37579345703, z= 37.415138244629},
+  {name="Vêtements", colour=5, scale=0.8, id=73, x= 426.88558959961, y= -800.76776123047, z= 29.491140365601},
+  {name="Vêtements", colour=5, scale=0.8, id=73, x= 124.15460968018, y= -218.45640563965, z= 54.557834625244},
+  {name="Vêtements", colour=5, scale=0.8, id=73, x= -3171.9428710938, y= 1048.8740234375, z= 20.863214492798},
+  {name="Vêtements", colour=5, scale=0.8, id=73, x= 8.0137987136841, y= 6514.873046875, z= 31.877849578857},
+  {name="Vêtements", colour=5, scale=0.8, id=73, x= 1192.9233398438, y= 2710.0363769531, z= 38.222602844238},
+  {name="Vêtements", colour=5, scale=0.8, id=73, x= -1105.0051269531, y= 2707.6650390625, z= 19.107866287231},
 }
 
 BarberShop = {
-  {name="Coiffeur", colour=9, scale=1.0, id=71, x = 1933.6905517578, y = 3730.6245117188, z = 32.854434967041},
-  {name="Coiffeur", colour=9, scale=1.0, id=71, x = 1211.2866210938, y = -474.07333374023, z = 66.218040466309},
+  {name="Coiffeur", colour=9, scale=0.8, id=71, x = 1933.6905517578, y = 3730.6245117188, z = 32.854434967041},
+  {name="Coiffeur", colour=9, scale=0.8, id=71, x = 1211.2866210938, y = -474.07333374023, z = 66.218040466309},
+  {name="Coiffeur", colour=5, scale=0.8, id=71, x = -278.88092041016, y = 6228.4169921875, z = 31.695405960083},
+  {name="Coiffeur", colour=5, scale=0.8, id=71, x = -1283.5050048828, y = -1117.8129882813, z = 6.9901127815247},
+  {name="Coiffeur", colour=5, scale=0.8, id=71, x = 136.1662902832, y = -1708.3577880859, z = 29.291622161865},
+  {name="Coiffeur", colour=5, scale=0.8, id=71, x = -33.007934570313, y = -152.6547088623, z = 57.076503753662},
 }
 
 Hospital = {
@@ -135,10 +148,10 @@ Log_company = {
 }
 
 informateur = {
-    {name="informateur", id=52, x=0.0, y=-0.0, z=0.0},
-    {name="informateur", id=52, x=0.0, y=0.0, z=0.0},
-    {name="informateur", id=52, x=0.0, y=0.0, z=0.0},
-    {name="informateur", id=52, x=0.0, y=0.0, z=0.0},
+  {name="informateur", id=52, x=-790.09460449219, y=15.452262878418, z=40.646659851074},
+  --{name="informateur", id=52, x=0.0, y=0.0, z=0.0},
+  --{name="informateur", id=52, x=0.0, y=0.0, z=0.0},
+  --{name="informateur", id=52, x=0.0, y=0.0, z=0.0},
 }
 
 lavage_argent = {

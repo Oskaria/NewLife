@@ -329,7 +329,7 @@ function ShowVehshopBlips(bool)
 			-- 60 58 137
 			SetBlipSprite(blip, 326)
 			SetBlipColour(blip, 3)
-			SetBlipScale(blip, 1.0)
+			SetBlipScale(blip, 0.8)
 			BeginTextCommandSetBlipName("STRING")
 			AddTextComponentString('Concessionnaire')
 			EndTextCommandSetBlipName(blip)
