@@ -42,19 +42,22 @@ Citizen.CreateThread(function()
 						DrawMarker(1,interiors[i].xe,interiors[i].ye,interiors[i].ze-1.0001, 0, 0, 0, 0, 0, 0, 1.01, 1.01, 0.3, 212, 189, 0, 105, 0, 0, 2, 0, 0, 0, 0)
 						if GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(-1)), interiors[i].xe,interiors[i].ye,interiors[i].ze, true) < 1.599 then
 							if timer == 0 then
-								DoScreenFadeOut(1000)
-								while IsScreenFadingOut() do Citizen.Wait(0) end
-								NetworkFadeOutEntity(GetPlayerPed(-1), true, false)
-								Wait(1000)
-								SetEntityCoords(GetPlayerPed(-1), interiors[i].xo,interiors[i].yo,interiors[i].zo)
-								SetEntityHeading(GetPlayerPed(-1), interiors[i].ho)
-								NetworkFadeInEntity(GetPlayerPed(-1), 0)
-								Wait(1000)
-								current_int = i
-								timer = 5
-								SimulatePlayerInputGait(PlayerId(), 1.0, 100, 1.0, 1, 0)
-								DoScreenFadeIn(1000)
-								while IsScreenFadingIn() do Citizen.Wait(0)	end
+                Info('Appuyer sur ~g~F~s~ pour entrer dans le batiment.', false)
+                if IsControlJustPressed(1, 23) then
+                  DoScreenFadeOut(1000)
+  								while IsScreenFadingOut() do Citizen.Wait(0) end
+  								NetworkFadeOutEntity(GetPlayerPed(-1), true, false)
+  								Wait(1000)
+  								SetEntityCoords(GetPlayerPed(-1), interiors[i].xo,interiors[i].yo,interiors[i].zo)
+  								SetEntityHeading(GetPlayerPed(-1), interiors[i].ho)
+  								NetworkFadeInEntity(GetPlayerPed(-1), 0)
+  								Wait(1000)
+  								current_int = i
+  								timer = 5
+  								SimulatePlayerInputGait(PlayerId(), 1.0, 100, 1.0, 1, 0)
+  								DoScreenFadeIn(1000)
+  								while IsScreenFadingIn() do Citizen.Wait(0)	end
+                end
 							end
 						end
 					end
@@ -62,19 +65,22 @@ Citizen.CreateThread(function()
 						DrawMarker(1,interiors[i].xo,interiors[i].yo,interiors[i].zo-1.0001, 0, 0, 0, 0, 0, 0, 1.01, 1.01, 0.3, 212, 189, 0, 105, 0, 0, 2, 0, 0, 0, 0)
 						if GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(-1)), interiors[i].xo,interiors[i].yo,interiors[i].zo, true) < 1.599 then
 							if timer == 0 then
-								DoScreenFadeOut(1000)
-								while IsScreenFadingOut() do Citizen.Wait(0) end
-								NetworkFadeOutEntity(GetPlayerPed(-1), true, false)
-								Wait(1000)
-								SetEntityCoords(GetPlayerPed(-1), interiors[i].xe,interiors[i].ye,interiors[i].ze)
-								SetEntityHeading(GetPlayerPed(-1), interiors[i].ho)
-								NetworkFadeInEntity(GetPlayerPed(-1), 0)
-								Wait(1000)
-								current_int = i
-								timer = 5
-								SimulatePlayerInputGait(PlayerId(), 1.0, 100, 1.0, 1, 0)
-								DoScreenFadeIn(1000)
-								while IsScreenFadingIn() do Citizen.Wait(0)	end
+                Info('Appuyer sur ~g~F~s~ pour sortir du batiment.', false)
+                if IsControlJustPressed(1, 23) then
+                  DoScreenFadeOut(1000)
+  								while IsScreenFadingOut() do Citizen.Wait(0) end
+  								NetworkFadeOutEntity(GetPlayerPed(-1), true, false)
+  								Wait(1000)
+  								SetEntityCoords(GetPlayerPed(-1), interiors[i].xe,interiors[i].ye,interiors[i].ze)
+  								SetEntityHeading(GetPlayerPed(-1), interiors[i].ho)
+  								NetworkFadeInEntity(GetPlayerPed(-1), 0)
+  								Wait(1000)
+  								current_int = i
+  								timer = 5
+  								SimulatePlayerInputGait(PlayerId(), 1.0, 100, 1.0, 1, 0)
+  								DoScreenFadeIn(1000)
+  								while IsScreenFadingIn() do Citizen.Wait(0)	end
+                end
 							end
 						end
 					end
@@ -92,3 +98,9 @@ Citizen.CreateThread(function()
 		end
 	end
 end)
+
+function Info(text, loop)
+	SetTextComponentFormat("STRING")
+	AddTextComponentString(text)
+	DisplayHelpTextFromStringLabel(0, loop, 1, 0)
+end

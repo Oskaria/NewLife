@@ -48,6 +48,7 @@ AutoStartResources:
     - vdk_inventory
     - vdk_truck
     - playerdrop
+    - apartments
 
     - es_afterStart
     #GARDER ES_AFTERSTART DERNIER MERCI LEL
