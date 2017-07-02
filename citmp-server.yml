@@ -51,6 +51,7 @@ AutoStartResources:
     - apartments
     - taxi
     - watermark
+    - coffrelspd
 
     - es_afterStart
     #GARDER ES_AFTERSTART DERNIER MERCI LEL
