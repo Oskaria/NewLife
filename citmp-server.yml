@@ -24,7 +24,7 @@ AutoStartResources:
     - banking
     - foodhud
     - lscustoms
-    - loadingscreen
+    #- loadingscreen
     - tradeIlegal
     - interiors
     - FBI
