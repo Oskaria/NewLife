@@ -334,8 +334,8 @@ AddEventHandler('jobspolice:cadet', function()
   SetPedComponentVariation(GetPlayerPed(-1), 11, 55, 0, 0)--Veste
   SetPedPropIndex(GetPlayerPed(-1), 2, 2, 0, 1)--Oreillete
   SetPedPropIndex(GetPlayerPed(-1), 6, 3, 0, 1)--Montre
-  SetPedPropIndex(GetPlayerPed(-1), 1, 7, 0, 1)--Lunette
-  SetPedComponentVariation(GetPlayerPed(-1), 8, 59, 0, 0)--GiletJaune
+  --SetPedPropIndex(GetPlayerPed(-1), 1, 7, 0, 1)--Lunette
+  SetPedComponentVariation(GetPlayerPed(-1), 8, 59, 1, 2)--GiletJaune
 end)
 
 RegisterNetEvent("jobspolice:brigadier")
@@ -347,7 +347,7 @@ AddEventHandler('jobspolice:brigadier', function()
   SetPedComponentVariation(GetPlayerPed(-1), 11, 55, 0, 0)--Veste
   SetPedPropIndex(GetPlayerPed(-1), 2, 2, 0, 1)--Oreillete
   SetPedPropIndex(GetPlayerPed(-1), 6, 3, 0, 1)--Montre
-  SetPedPropIndex(GetPlayerPed(-1), 1, 7, 0, 1)--Lunette
+  --SetPedPropIndex(GetPlayerPed(-1), 1, 7, 0, 1)--Lunette
 end)
 RegisterNetEvent("jobspolice:sergent")
 AddEventHandler('jobspolice:sergent', function()
@@ -358,7 +358,7 @@ AddEventHandler('jobspolice:sergent', function()
   SetPedComponentVariation(GetPlayerPed(-1), 11, 55, 0, 0)--Veste
   SetPedPropIndex(GetPlayerPed(-1), 2, 2, 0, 1)--Oreillete
   SetPedPropIndex(GetPlayerPed(-1), 6, 3, 0, 1)--Montre
-  SetPedPropIndex(GetPlayerPed(-1), 1, 7, 0, 1)--Lunette
+  --SetPedPropIndex(GetPlayerPed(-1), 1, 7, 0, 1)--Lunette
   SetPedComponentVariation(GetPlayerPed(-1), 10, 8, 2, 0)--Grade
 end)
 RegisterNetEvent("jobspolice:lieutenant")
@@ -370,7 +370,7 @@ AddEventHandler('jobspolice:lieutenant', function()
   SetPedComponentVariation(GetPlayerPed(-1), 11, 55, 0, 0)--Veste
   SetPedPropIndex(GetPlayerPed(-1), 2, 2, 0, 1)--Oreillete
   SetPedPropIndex(GetPlayerPed(-1), 6, 3, 0, 1)--Montre
-  SetPedPropIndex(GetPlayerPed(-1), 1, 7, 0, 1)--Lunette
+  --SetPedPropIndex(GetPlayerPed(-1), 1, 7, 0, 1)--Lunette
   SetPedComponentVariation(GetPlayerPed(-1), 10, 8, 2, 0)--Grade
 end)
 RegisterNetEvent("jobspolice:capitaine")
