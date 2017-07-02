@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50718
 File Encoding         : 65001
 
-Date: 2017-07-02 01:30:16
+Date: 2017-07-02 02:47:56
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -86,6 +86,7 @@ DEFAULT CHARACTER SET=utf8 COLLATE=utf8_general_ci
 -- Records of coordinates
 -- ----------------------------
 BEGIN;
+INSERT INTO `coordinates` VALUES ('steam:11000010947456d', '-837.2211303710938', '-405.06048583984375', '31.471559524536133');
 COMMIT;
 
 -- ----------------------------
@@ -182,7 +183,7 @@ CREATE TABLE `outfits` (
 `seven`  int(11) NOT NULL DEFAULT 0 ,
 `seven_text`  int(11) NOT NULL DEFAULT 0 ,
 `haircolor`  int(11) NOT NULL DEFAULT 0 ,
-`haircolor_text`  int(11) NOT NULL DEFAULT 0
+`haircolor_text`  int(11) NOT NULL DEFAULT 0 
 )
 ENGINE=InnoDB
 DEFAULT CHARACTER SET=utf8 COLLATE=utf8_general_ci
@@ -193,6 +194,7 @@ DEFAULT CHARACTER SET=utf8 COLLATE=utf8_general_ci
 -- Records of outfits
 -- ----------------------------
 BEGIN;
+INSERT INTO `outfits` VALUES ('steam:11000010947456d', 'mp_m_freemode_01', '0', '0', '10', '0', '13', '0', '10', '0', '72', '2', '10', '0', '33', '0', '12', '2', '0', '4');
 COMMIT;
 
 -- ----------------------------
@@ -241,6 +243,32 @@ INSERT INTO `police` VALUES ('1', 'Cadet', '500'), ('2', 'Brigadier', '500'), ('
 COMMIT;
 
 -- ----------------------------
+-- Table structure for user_appartement
+-- ----------------------------
+DROP TABLE IF EXISTS `user_appartement`;
+CREATE TABLE `user_appartement` (
+`id`  int(11) NOT NULL AUTO_INCREMENT ,
+`identifier`  varchar(60) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL ,
+`name`  varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL ,
+`price`  int(11) NOT NULL ,
+`money`  int(11) NOT NULL DEFAULT 0 ,
+`dirtymoney`  int(11) NOT NULL DEFAULT 0 ,
+PRIMARY KEY (`id`)
+)
+ENGINE=MyISAM
+DEFAULT CHARACTER SET=latin1 COLLATE=latin1_swedish_ci
+AUTO_INCREMENT=10
+
+;
+
+-- ----------------------------
+-- Records of user_appartement
+-- ----------------------------
+BEGIN;
+INSERT INTO `user_appartement` VALUES ('9', 'steam:11000010947456d', 'Condo de Luxe 14', '100000', '0', '0');
+COMMIT;
+
+-- ----------------------------
 -- Table structure for user_boat
 -- ----------------------------
 DROP TABLE IF EXISTS `user_boat`;
@@ -257,7 +285,7 @@ CREATE TABLE `user_boat` (
 `boat_pearlescentcolor`  varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL ,
 `boat_wheelcolor`  varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL ,
 PRIMARY KEY (`id`),
-UNIQUE INDEX `boat_plate` (`boat_plate`) USING BTREE
+UNIQUE INDEX `boat_plate` (`boat_plate`) USING BTREE 
 )
 ENGINE=InnoDB
 DEFAULT CHARACTER SET=utf8 COLLATE=utf8_general_ci
@@ -281,7 +309,7 @@ CREATE TABLE `user_inventory` (
 `quantity`  int(11) NULL DEFAULT NULL ,
 PRIMARY KEY (`user_id`, `item_id`),
 FOREIGN KEY (`item_id`) REFERENCES `items` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
-INDEX `item_id` (`item_id`) USING BTREE
+INDEX `item_id` (`item_id`) USING BTREE 
 )
 ENGINE=InnoDB
 DEFAULT CHARACTER SET=utf8 COLLATE=utf8_general_ci
@@ -292,6 +320,7 @@ DEFAULT CHARACTER SET=utf8 COLLATE=utf8_general_ci
 -- Records of user_inventory
 -- ----------------------------
 BEGIN;
+INSERT INTO `user_inventory` VALUES ('steam:11000010947456d', '1', '0'), ('steam:11000010947456d', '2', '0'), ('steam:11000010947456d', '3', '0'), ('steam:11000010947456d', '4', '0'), ('steam:11000010947456d', '5', '0'), ('steam:11000010947456d', '6', '0'), ('steam:11000010947456d', '7', '0'), ('steam:11000010947456d', '8', '0'), ('steam:11000010947456d', '9', '0'), ('steam:11000010947456d', '10', '0'), ('steam:11000010947456d', '11', '0'), ('steam:11000010947456d', '12', '0'), ('steam:11000010947456d', '13', '0'), ('steam:11000010947456d', '14', '0'), ('steam:11000010947456d', '15', '0'), ('steam:11000010947456d', '16', '0'), ('steam:11000010947456d', '17', '0'), ('steam:11000010947456d', '18', '0'), ('steam:11000010947456d', '19', '0'), ('steam:11000010947456d', '20', '0'), ('steam:11000010947456d', '21', '0'), ('steam:11000010947456d', '22', '0'), ('steam:11000010947456d', '23', '0'), ('steam:11000010947456d', '24', '0'), ('steam:11000010947456d', '25', '0'), ('steam:11000010947456d', '26', '0'), ('steam:11000010947456d', '27', '0');
 COMMIT;
 
 -- ----------------------------
@@ -370,11 +399,11 @@ CREATE TABLE `user_vehicle` (
 `vehicle_smokecolor3`  varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL ,
 `vehicle_modvariation`  varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT 'off' ,
 PRIMARY KEY (`id`),
-UNIQUE INDEX `vehicle_plate` (`vehicle_plate`) USING BTREE
+UNIQUE INDEX `vehicle_plate` (`vehicle_plate`) USING BTREE 
 )
 ENGINE=InnoDB
 DEFAULT CHARACTER SET=utf8 COLLATE=utf8_general_ci
-AUTO_INCREMENT=1
+AUTO_INCREMENT=2
 
 ;
 
@@ -382,6 +411,7 @@ AUTO_INCREMENT=1
 -- Records of user_vehicle
 -- ----------------------------
 BEGIN;
+INSERT INTO `user_vehicle` VALUES ('1', 'steam:11000010947456d', 'Dominator', 'dominator', '35000', 'CTZN456D', 'Rentré', '138', '12', '4', '156', '1', '255', '0', '255', '1', '1', '0', '-1', '-1', '-1', '0', '0', '-1', '-1', '-1', '-1', '-1', '-1', '2', '2', '-1', '3', '4', 'on', 'on', 'on', '5', '-1', 'off', 'off', 'off', 'off', 'on', '1', '1', '1', 'on');
 COMMIT;
 
 -- ----------------------------
@@ -426,6 +456,7 @@ CREATE TABLE `users` (
 `nom`  varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL DEFAULT '' ,
 `prenom`  varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL DEFAULT '' ,
 `telephone`  varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL DEFAULT '' ,
+`player_state`  int(255) NOT NULL DEFAULT 0 ,
 PRIMARY KEY (`ID`)
 )
 ENGINE=InnoDB
@@ -438,6 +469,7 @@ AUTO_INCREMENT=2
 -- Records of users
 -- ----------------------------
 BEGIN;
+INSERT INTO `users` VALUES ('1', 'steam:11000010947456d', 'user', '0', '764686', '5000000', '1', '0', '0', '0', '1', 'Johns', 'Connor', '654-7490', '0');
 COMMIT;
 
 -- ----------------------------
@@ -501,6 +533,11 @@ ALTER TABLE `phonebook` AUTO_INCREMENT=1;
 ALTER TABLE `police` AUTO_INCREMENT=9;
 
 -- ----------------------------
+-- Auto increment value for user_appartement
+-- ----------------------------
+ALTER TABLE `user_appartement` AUTO_INCREMENT=10;
+
+-- ----------------------------
 -- Auto increment value for user_boat
 -- ----------------------------
 ALTER TABLE `user_boat` AUTO_INCREMENT=1;
@@ -513,7 +550,7 @@ ALTER TABLE `user_licence` AUTO_INCREMENT=1;
 -- ----------------------------
 -- Auto increment value for user_vehicle
 -- ----------------------------
-ALTER TABLE `user_vehicle` AUTO_INCREMENT=1;
+ALTER TABLE `user_vehicle` AUTO_INCREMENT=2;
 
 -- ----------------------------
 -- Auto increment value for user_weapons
