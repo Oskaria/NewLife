@@ -15,6 +15,10 @@ Date: 2017-07-02 03:38:57
 
 SET FOREIGN_KEY_CHECKS=0;
 
+DROP DATABASE IF EXISTS gta5_gamemode_essential;
+CREATE DATABASE gta5_gamemode_essential;
+USE gta5_gamemode_essential;
+
 -- ----------------------------
 -- Table structure for autoecole
 -- ----------------------------
