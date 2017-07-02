@@ -239,7 +239,7 @@ Citizen.CreateThread(function()
         --if IsControlJustPressed(1, 167) then
             --TriggerServerEvent("item:getItems")
         --end
-        if IsControlJustPressed(1, 303) then
+        if IsControlJustPressed(1, 311) then
             animsMenu() -- Menu to draw
             Menu.hidden = not Menu.hidden -- Hide/Show the menu
         end
