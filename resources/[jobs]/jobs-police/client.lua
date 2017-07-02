@@ -13,10 +13,11 @@ local Garage_police = {
 }
 
 local police = {
-  {name="M4", id="WEAPON_CARBINERIFLE"},
-  {name="Fusil à pompe", id="WEAPON_PUMPSHOTGUN"},
-  {name="Pistolet", id="WEAPON_PISTOL"},
   {name="Matraque", id="WEAPON_NIGHTSTICK"},
+  {name="Pistolet", id="WEAPON_PISTOL"},
+  {name="SMG", id="WEAPON_SMG"},
+  {name="Fusil à pompe", id="WEAPON_PUMPSHOTGUN"},
+  {name="M4", id="WEAPON_CARBINERIFLE"},
 }
 
 local jobs = {

@@ -958,10 +958,12 @@ function Construct()
 
 	local menu = 6
 	VMenu.AddMenu(menu, "", "armurerie") -- default = Header "Texte" sur fond bleu
-	VMenu.AddFunc(menu, "M4", "vmenu:getArmory", {"WEAPON_CARBINERIFLE"}, "Obtenir cette arme")
-	VMenu.AddFunc(menu, "Fusil à pompe", "vmenu:getArmory", {"WEAPON_PUMPSHOTGUN"}, "Obtenir cette arme")
-	VMenu.AddFunc(menu, "Pistolet", "vmenu:getArmory", {"WEAPON_PISTOL"}, "Obtenir cette arme")
 	VMenu.AddFunc(menu, "Matraque", "vmenu:getArmory", {"WEAPON_NIGHTSTICK"}, "Obtenir cette arme")
+	VMenu.AddFunc(menu, "Tazer", "vmenu:getArmory", {"WEAPON_STUNGUN"}, "Obtenir cette arme")
+	VMenu.AddFunc(menu, "Pistolet", "vmenu:getArmory", {"WEAPON_PISTOL"}, "Obtenir cette arme")
+	VMenu.AddFunc(menu, "SMG", "vmenu:getArmory", {"WEAPON_SMG"}, "Obtenir cette arme")
+	VMenu.AddFunc(menu, "Fusil à pompe", "vmenu:getArmory", {"WEAPON_PUMPSHOTGUN"}, "Obtenir cette arme")
+	VMenu.AddFunc(menu, "M4", "vmenu:getArmory", {"WEAPON_CARBINERIFLE"}, "Obtenir cette arme")
 
 	local menu = 7
 	VMenu.AddMenu(menu, "", "default") -- default = Header "Texte" sur fond bleu
@@ -970,28 +972,17 @@ function Construct()
 	if User.vehicle == 0 then
 		if User.enService == 1 then
 			if User.police >= 1 then
-				VMenu.AddFunc(menu, "Crown Victoria police", "vmenu:getGarage", {"police7"}, "Obtenir cette voiture")
-				VMenu.AddFunc(menu, "Impala police", "vmenu:getGarage", {"police8"}, "Obtenir cette voiture")
-				VMenu.AddFunc(menu, "Charger Sheriff", "vmenu:getGarage", {"sheriff"}, "Obtenir cette voiture")
+				VMenu.AddFunc(menu, "Crown Victoria", "vmenu:getGarage", {"Police"}, "Obtenir cette voiture")
 			end
 			if User.police >= 2 then
-				VMenu.AddFunc(menu, "Taurus police", "vmenu:getGarage", {"police4"}, "Obtenir cette voiture")
-				VMenu.AddFunc(menu, "Suberban Sheriff", "vmenu:getGarage", {"sheriff2"}, "Obtenir cette voiture")
-				VMenu.AddFunc(menu, "Crown Victoria Sheriff", "vmenu:getGarage", {"sheriff3"}, "Obtenir cette voiture")
-			end
-			if User.police >= 3 then
-				VMenu.AddFunc(menu, "Charger police", "vmenu:getGarage", {"police2"}, "Obtenir cette voiture")
+				VMenu.AddFunc(menu, "Dodge Charger", "vmenu:getGarage", {"Police2"}, "Obtenir cette voiture")
 			end
 			if User.police >= 4 then
-				VMenu.AddFunc(menu, "Suberban K9", "vmenu:getGarage", {"police6"}, "Obtenir cette voiture")
+				VMenu.AddFunc(menu, "Ford Interceptor", "vmenu:getGarage", {"Police3"}, "Obtenir cette voiture")
+				VMenu.AddFunc(menu, "Crown Victoria Banalisée", "vmenu:getGarage", {"Police4"}, "Obtenir cette voiture")
 			end
 			if User.police >= 5 then
-				VMenu.AddFunc(menu, "Taho banalisée", "vmenu:getGarage", {"fbi2"}, "Obtenir cette voiture")
-				VMenu.AddFunc(menu, "Charger banalisée", "vmenu:getGarage", {"fbi"}, "Obtenir cette voiture")
-			end
-			if User.police >= 6 then
-				VMenu.AddFunc(menu, "Police explorer interceptor", "vmenu:getGarage", {"police3"}, "Obtenir cette voiture")
-				VMenu.AddFunc(menu, "Interceptor police 2017", "vmenu:getGarage", {"police5"}, "Obtenir cette voiture")
+				VMenu.AddFunc(menu, "Riot", "vmenu:getGarage", {"Riot"}, "Obtenir cette voiture")
 			end
 		end
 	else
@@ -1151,29 +1142,17 @@ function getGaragePolice()
 	if User.enService == 1 then
 		if User.police >= 1 then
 			VMenu.AddFunc(7, "Ranger votre véhicule", "vmenu:toGarage", {}, "Il doit être devant vous")
-			VMenu.AddFunc(7, "Crown Victoria police", "vmenu:getGarage", {"police7"}, "Obtenir cette voiture")
-			VMenu.AddFunc(7, "Impala police", "vmenu:getGarage", {"police8"}, "Obtenir cette voiture")
-			VMenu.AddFunc(7, "Crown Victoria", "vmenu:getGarage", {"sheriff3"}, "Obtenir cette voiture")
+			VMenu.AddFunc(7, "Crown Victoria", "vmenu:getGarage", {"Police"}, "Obtenir cette voiture")
 		end
 		if User.police >= 2 then
-			VMenu.AddFunc(7, "Taurus police", "vmenu:getGarage", {"police4"}, "Obtenir cette voiture")
-			VMenu.AddFunc(7, "Charger", "vmenu:getGarage", {"sheriff"}, "Obtenir cette voiture")
-			VMenu.AddFunc(7, "Suberban", "vmenu:getGarage", {"sheriff2"}, "Obtenir cette voiture")
-		end
-		if User.police >= 3 then
-			VMenu.AddFunc(7, "Charger police", "vmenu:getGarage", {"police2"}, "Obtenir cette voiture")
+			VMenu.AddFunc(7, "Dodge Charger", "vmenu:getGarage", {"Police2"}, "Obtenir cette voiture")
 		end
 		if User.police >= 4 then
-			VMenu.AddFunc(7, "Suberban K9", "vmenu:getGarage", {"police6"}, "Obtenir cette voiture")
+			VMenu.AddFunc(7, "Ford Interceptor", "vmenu:getGarage", {"Police3"}, "Obtenir cette voiture")
+			VMenu.AddFunc(7, "Crown Victoria Banalisée", "vmenu:getGarage", {"Police4"}, "Obtenir cette voiture")
 		end
 		if User.police >= 5 then
-			VMenu.AddFunc(7, "Taho banalisée", "vmenu:getGarage", {"fbi2"}, "Obtenir cette voiture")
-			VMenu.AddFunc(7, "Charger banalisée", "vmenu:getGarage", {"fbi"}, "Obtenir cette voiture")
-			VMenu.AddFunc(7, "Moto", "vmenu:getGarage", {"policeb"}, "Obtenir ce véhicule")
-		end
-		if User.police >= 6 then
-			VMenu.AddFunc(7, "Police Explorer Interceptor", "vmenu:getGarage", {"police3"}, "Obtenir cette voiture")
-			VMenu.AddFunc(7, "Police Explorer", "vmenu:getGarage", {"police5"}, "Obtenir cette voiture")
+			VMenu.AddFunc(7, "Riot", "vmenu:getGarage", {"Riot"}, "Obtenir cette voiture")
 		end
 	else
 		VMenu.AddSep(7, "Vous n'êtes pas en service")

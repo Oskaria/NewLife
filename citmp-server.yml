@@ -27,9 +27,9 @@ AutoStartResources:
     #- loadingscreen
     - tradeIlegal
     - interiors
-    - FBI
-    - Sheriff
-    - LSPD
+    #- FBI
+    #- Sheriff
+    #- LSPD
     - mine
     - Wrapper
     - ccreation
@@ -59,7 +59,7 @@ AutoStartResources:
 RconPassword: 1202
 
 # configure this, please
-Hostname: NewLife
+Hostname: NewLife-RP
 
 # don't change this, it'll cause your server to be unlisted
 Game: GTA5
