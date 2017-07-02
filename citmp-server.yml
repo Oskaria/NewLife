@@ -44,6 +44,10 @@ AutoStartResources:
     - ply_prefecture
     - carcrash
     - es_carfixen
+    - vdk_call
+    - vdk_inventory
+    - vdk_truck
+    - playerdrop
 
     - es_afterStart
     #GARDER ES_AFTERSTART DERNIER MERCI LEL

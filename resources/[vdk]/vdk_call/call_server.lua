@@ -6,14 +6,16 @@ RegisterServerEvent("call:getCall")
 local inService = {
     ["police"] = {},
     ["medic"] = {},
-    ["uber"] = {},
+    ["taxi"] = {},
+    ["mécanicien"] = {}, 
 }
 local callActive = {
     ["police"] = {taken = false},
     ["medic"] = {taken = false},
-    ["uber"] = {taken = false},
+    ["taxi"] = {taken = false},
+    ["mécanicien"] = {taken = false},
 }
-local timing = 15000
+local timing = 1500
 
 -- Add the player to the inService table
 AddEventHandler("player:serviceOn", function(job)
