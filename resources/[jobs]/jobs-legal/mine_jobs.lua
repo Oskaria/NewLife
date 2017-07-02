@@ -3,7 +3,7 @@
 ----------------------------------------------------
 ------------------------Lua-------------------------
 
-local DrawMarkerShow = true
+local DrawMarkerShow = false
 local DrawBlipTradeShow = true
 
 -- -900.0, -3002.0, 13.0
@@ -456,6 +456,7 @@ function AfficherBlip()
 
   SetBlipSprite(BlipMine, 78)
   SetBlipColour(BlipMine, 2)
+  SetBlipScale(BlipMine, 0.8)
   SetBlipAsShortRange(BlipMine, true)
   BeginTextCommandSetBlipName("STRING")
   AddTextComponentString('Mine')
@@ -465,6 +466,7 @@ function AfficherBlip()
 
   SetBlipSprite(BlipTraitement, 233)
   SetBlipColour(BlipTraitement, 2)
+  SetBlipScale(BlipTraitement, 0.8)
   SetBlipAsShortRange(BlipTraitement, true)
   BeginTextCommandSetBlipName("STRING")
   AddTextComponentString('Traitement de minéraux')
@@ -474,6 +476,7 @@ function AfficherBlip()
 
   SetBlipSprite(BlipVenteMine, 277)
   SetBlipColour(BlipVenteMine, 2)
+  SetBlipScale(BlipTraitement, 0.8)
   SetBlipAsShortRange(BlipVenteMine, true)
   BeginTextCommandSetBlipName("STRING")
   AddTextComponentString('Acheteur de minéraux')
@@ -483,6 +486,7 @@ function AfficherBlip()
 
   SetBlipSprite(BlipVenteDiams, 277)
   SetBlipColour(BlipVenteDiams, 2)
+  SetBlipScale(BlipTraitement, 0.8)
   SetBlipAsShortRange(BlipVenteDiams, true)
   BeginTextCommandSetBlipName("STRING")
   AddTextComponentString('Acheteur de diamant')

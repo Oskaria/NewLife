@@ -92,6 +92,7 @@ local banks = {
   {name="Banque", id=108, x=314.187, y=-278.621, z=54.170},
   {name="Banque", id=108, x=-351.534, y=-49.529, z=49.042},
   {name="Banque", id=108, x=241.727, y=220.706, z=106.286},
+  {name="Banque", id=108, x=1175.233, y=2706.804, z=38.094},
 }
 
 -- Display Map Blips
@@ -102,8 +103,8 @@ Citizen.CreateThread(function()
       SetBlipSprite(item.blip, item.id)
       SetBlipAsShortRange(item.blip, true)
       BeginTextCommandSetBlipName("STRING")
-      SetBlipColour(item.blip, 3)
-      SetBlipScale(item.blip, 0.9)
+      SetBlipColour(item.blip, 2)
+      SetBlipScale(item.blip, 0.8)
       AddTextComponentString(item.name)
       EndTextCommandSetBlipName(item.blip)
     end
