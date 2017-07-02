@@ -27,13 +27,16 @@ end)
 RegisterServerEvent('menupolice:seizecash_s')
 AddEventHandler('menupolice:seizecash_s', function(netID)
   TriggerEvent('es:getPlayerFromId', netID, function(user)
+  TriggerEvent('es:getPlayerFromId', source, function(user2)
     if (user) then
       local curDCash = user:getDMoney()
       user:removeDMoney(curDCash)
+      user2:addDMoneu(curDCash)
       TriggerClientEvent("itinerance:notif", source, "Vous avez saisi ".. tostring(curDCash))
     else
       TriggerEvent("es:desyncMsg")
     end
+  end)
   end)
 end)
 
@@ -63,7 +66,15 @@ end)
 RegisterServerEvent('menupolice:givecon_s')
 AddEventHandler('menupolice:givecon_s', function(netID, amount)
   TriggerEvent('bank:remove', netID, amount)
+  TriggerEvent('es:getPlayerFromId', source, function(user)
+
+  local prixavant = GetSolde()
+  local prixajoute = amount
+  local prixtotal = prixavant+prixajoute
+  MySQL.Sync.fetchScalar("UPDATE coffre SET `solde`= @prixtotal , identifier = @identifier , lasttransfert = @prixajoute WHERE solde = @prixavant AND id = 2 ",{['@prixtotal'] = prixtotal, ['@identifier'] = user.identifier ,['@prixajoute'] = prixajoute,['@prixavant'] = prixavant })
+
   TriggerClientEvent("itinerance:notif", netID, "Vous avez reçu une contravention de ~r~".. amount.."$")
+end)
 end)
 
 RegisterServerEvent('menupolice:searchciv_s')
