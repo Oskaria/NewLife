@@ -1,6 +1,6 @@
 local blips = {
   {name="Gouvernement", id=419, scale=1.2, x= 112.37101745605, y= -749.36193847656, z= 45.751594543457},
-  {name="Pole Emploi", colour=2, scale=0.8, id=351, x=-601.59295654297, y=-116.45598602295, z=41.734840393066},
+  {name="Pole Emploi", colour=2, scale=0.8, id=351, x=-1082.2565917969, y=-247.64393615723, z=37.763290405273},
   {name="Taxi", colour=46, scale=0.8, id=56, x=906.204, y=-174.885, z=74.084},
    -- Airport and Airfield
    {name="Aéroport", colour=15, scale=0.8, id=90, x=-1032.690, y=-2728.141, z=13.757},

@@ -7,7 +7,7 @@ OutfitsCat = {"Haute Gamme", "Associates", "Beach", "Biker", "Biker Suit", "VIP"
  "Heist Buisness Security", "Flight Suit", "Flashy", "Festive", "Drop Zone", "Deadline", "CEO", "Casual", "Bodysuits", "Bodyguard"}
 
 changeYourJob = {
-  {name="Pole Emploi", colour=15, id=351, x=-601.59295654297, y=-116.45598602295, z=41.734840393066},
+  {name="Pole Emploi", colour=15, id=351, x=-1082.2565917969, y=-247.64393615723, z=37.763290405273},
 }
 
 jobsname = {"Sans Emploi", "Nettoyeur de piscines", "Éboueur", "Mineur", "Chauffeur de taxi", "Livreur de bois", "Livreur de citerne", "Livreur de conteneur", "Livreur de médicaments", "Policier", "Fossoyeur", "Préposé à la morgue", "Ambulancier" }
