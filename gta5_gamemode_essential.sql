@@ -10,14 +10,10 @@ Target Server Type    : MYSQL
 Target Server Version : 50718
 File Encoding         : 65001
 
-Date: 2017-07-02 03:38:57
+Date: 2017-07-02 17:26:58
 */
 
 SET FOREIGN_KEY_CHECKS=0;
-
-DROP DATABASE IF EXISTS gta5_gamemode_essential;
-CREATE DATABASE gta5_gamemode_essential;
-USE gta5_gamemode_essential;
 
 -- ----------------------------
 -- Table structure for autoecole
@@ -90,7 +86,7 @@ DEFAULT CHARACTER SET=utf8 COLLATE=utf8_general_ci
 -- Records of coordinates
 -- ----------------------------
 BEGIN;
-INSERT INTO `coordinates` VALUES ('steam:11000010947456d', '979.3524169921875', '-1923.458740234375', '31.134464263916016');
+INSERT INTO `coordinates` VALUES ('steam:11000010947456d', '409.9996032714844', '-1022.4995727539062', '29.37645721435547');
 COMMIT;
 
 -- ----------------------------
@@ -129,7 +125,7 @@ PRIMARY KEY (`job_id`)
 )
 ENGINE=InnoDB
 DEFAULT CHARACTER SET=utf8 COLLATE=utf8_general_ci
-AUTO_INCREMENT=14
+AUTO_INCREMENT=18
 
 ;
 
@@ -137,7 +133,7 @@ AUTO_INCREMENT=14
 -- Records of jobs
 -- ----------------------------
 BEGIN;
-INSERT INTO `jobs` VALUES ('1', 'Sans Emploi', '0'), ('2', 'Nettoyeur de piscine', '0'), ('3', 'Éboueur', '0'), ('4', 'Mineur', '0'), ('5', 'Chauffeur de taxi', '500'), ('6', 'Livreur de bois', '0'), ('7', 'Livreur de citerne', '0'), ('8', 'Livreur de conteneur', '0'), ('9', 'Livreur de médicament', '0'), ('10', 'Policier', '0'), ('11', 'Fossoyeur', '0'), ('12', 'Préposé à la morgue', '0'), ('13', 'Ambulancier', '500');
+INSERT INTO `jobs` VALUES ('1', 'Sans Emploi', '0'), ('2', 'Nettoyeur de piscine', '0'), ('3', 'Éboueur', '0'), ('4', 'Mineur', '0'), ('5', 'Chauffeur de taxi', '500'), ('6', 'Livreur de bois', '0'), ('7', 'Livreur de citerne', '0'), ('8', 'Livreur de conteneur', '0'), ('9', 'Livreur de médicament', '0'), ('10', 'Policier', '0'), ('11', 'Fossoyeur', '0'), ('12', 'Préposé à la morgue', '0'), ('13', 'Ambulancier', '500'), ('14', 'Président', '0'), ('15', 'Secrétaire', '0'), ('16', 'Services Secrets', '0'), ('17', 'Agent Fédéral', '0');
 COMMIT;
 
 -- ----------------------------
@@ -473,7 +469,7 @@ AUTO_INCREMENT=2
 -- Records of users
 -- ----------------------------
 BEGIN;
-INSERT INTO `users` VALUES ('1', 'steam:11000010947456d', 'user', '0', '766186', '5000000', '4', '0', '0', '0', '1', 'Johns', 'Connor', '654-7490', '0');
+INSERT INTO `users` VALUES ('1', 'steam:11000010947456d', 'owner', '4', '727186', '5000000', '10', '5', '0', '0', '1', 'Johns', 'Connor', '654-7490', '0');
 COMMIT;
 
 -- ----------------------------
@@ -539,7 +535,7 @@ ALTER TABLE `items` AUTO_INCREMENT=28;
 -- ----------------------------
 -- Auto increment value for jobs
 -- ----------------------------
-ALTER TABLE `jobs` AUTO_INCREMENT=14;
+ALTER TABLE `jobs` AUTO_INCREMENT=18;
 
 -- ----------------------------
 -- Auto increment value for licences

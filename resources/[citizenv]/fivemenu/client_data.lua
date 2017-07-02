@@ -10,7 +10,7 @@ changeYourJob = {
   {name="Pole Emploi", colour=15, id=351, x=-1082.2565917969, y=-247.64393615723, z=37.763290405273},
 }
 
-jobsname = {"Sans Emploi", "Nettoyeur de piscines", "Éboueur", "Mineur", "Chauffeur de taxi", "Livreur de bois", "Livreur de citerne", "Livreur de conteneur", "Livreur de médicaments", "Policier", "Fossoyeur", "Préposé à la morgue", "Ambulancier" }
+jobsname = {"Sans Emploi", "Nettoyeur de piscines", "Éboueur", "Mineur", "Chauffeur de taxi", "Livreur de bois", "Livreur de citerne", "Livreur de conteneur", "Livreur de médicaments", "Policier", "Fossoyeur", "Préposé à la morgue", "Ambulancier", "Président", "Secrétaire", "Services Secrets", "Agent Fédéral" }
 
 jobs = {
   {name="Sans Emploi", id=1},
