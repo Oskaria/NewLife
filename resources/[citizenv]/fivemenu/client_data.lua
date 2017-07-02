@@ -14,18 +14,12 @@ jobsname = {"Sans Emploi", "Nettoyeur de piscines", "Éboueur", "Mineur", "Chauf
 
 jobs = {
   {name="Sans Emploi", id=1},
-  --{name="Nettoyeur de piscine", id=2},
-  {name="Éboueur", id=3},
+  --{name="Éboueur", id=3},
   {name="Mineur", id=4},
-  --{name="Chauffeur de taxi", id=5},
   {name="Livreur de bois", id=6},
   {name="Livreur de citerne", id=7},
   {name="Livreur de conteneur", id=8},
   {name="Livreur de médicament", id=9},
-  --{name="Policier", id=10},
-  --{name="Fossoyeur", id=11},
-  --{name="Préposé à la morgue", id=12},
-  --{name="Ambulancier", id=13},
 }
 
 hair = {

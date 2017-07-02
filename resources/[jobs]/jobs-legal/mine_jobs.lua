@@ -10,10 +10,10 @@ local DrawBlipTradeShow = true
 -- -800.0, -3002.0, 13.0
 -- -1078.0, -3002.0, 13.0
 
-local PrixRoche = 1500
-local PrixCuivre = 1500
-local PrixFer = 1500
-local PrixDiams = 1500
+local PrixRoche = 1
+local PrixCuivre = 18
+local PrixFer = 38
+local PrixDiams = 187
 local chance = 10
 local qte = 0
 local camionSortie = false
@@ -200,7 +200,7 @@ Citizen.CreateThread(function()
                 local chance_mat = math.random(chance,1000)
                 Wait(100)
                 Citizen.Wait(1)
-                if (roche+cuivre+fer+diams) < 30 and chance_mat <=500  then
+                if (roche+cuivre+fer+diams) < 30 and chance_mat <=65  then
                   ShowMsgtime.msg = 'Miner'
                   ShowMsgtime.time = 250
                   TriggerEvent("vmenu:anim" ,"pickup_object", "pickup_low")
@@ -210,7 +210,7 @@ Citizen.CreateThread(function()
                   TriggerEvent("player:receiveItem", 23, 1)
                   chance = chance + 1
 
-                elseif (roche+cuivre+fer+diams) < 30 and chance_mat <=800  then
+                elseif (roche+cuivre+fer+diams) < 30 and chance_mat <=720  then
                   ShowMsgtime.msg = 'Miner'
                   ShowMsgtime.time = 250
                   TriggerEvent("vmenu:anim" ,"pickup_object", "pickup_low")
@@ -220,7 +220,7 @@ Citizen.CreateThread(function()
                   TriggerEvent("player:receiveItem", 17, 1)
                   chance = chance + 1
 
-                elseif (roche+cuivre+fer+diams) < 30 and chance_mat <= 980 then
+                elseif (roche+cuivre+fer+diams) < 30 and chance_mat <= 999 then
                   ShowMsgtime.msg = 'Miner'
                   ShowMsgtime.time = 250
                   TriggerEvent("vmenu:anim" ,"pickup_object", "pickup_low")

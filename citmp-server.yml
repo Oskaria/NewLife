@@ -16,20 +16,15 @@ AutoStartResources:
     - es_admin
     - jobs-legal
     - truckerjob
-    #- es_garages
     - es_weashop
     - jobs-police
     - vdk_call
     - salaire
     - banking
     - foodhud
-    - lscustoms
-    #- loadingscreen
+    #- lscustoms
     - tradeIlegal
     - interiors
-    #- FBI
-    #- Sheriff
-    #- LSPD
     - mine
     - Wrapper
     - ccreation
@@ -48,11 +43,12 @@ AutoStartResources:
     - vdk_inventory
     - vdk_truck
     - playerdrop
-    - apartments
+    #- apartments
     - taxi
     - watermark
     - coffrelspd
     - coffregouv
+    - vehcontrol
 
     - es_afterStart
     #GARDER ES_AFTERSTART DERNIER MERCI LEL

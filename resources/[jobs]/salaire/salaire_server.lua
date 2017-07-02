@@ -1,9 +1,9 @@
 -- Loading MySQL Class
 require "resources/mysql-async/lib/MySQL"
- 
+
 RegisterServerEvent('paycheck:salary')
 AddEventHandler('paycheck:salary', function()
-    local salary = math.random(100, 250) --Aide de l'État random (ici entre 100 et 250) RP: A changer au bon vouloir du président
+    local salary = 100 --Aide de l'État random (ici entre 100 et 250) RP: A changer au bon vouloir du président
     TriggerEvent('es:getPlayerFromId', source, function(user)
         if (user) then
             -- Ajout de l'argent à l'utilisateur

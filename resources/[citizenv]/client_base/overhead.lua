@@ -26,10 +26,10 @@ Citizen.CreateThread(function()
 				end
 
 				if NetworkIsPlayerTalking(id) then
-					N_0x63bb75abedc1f6a0(headDisplayId, 4, true) -- Speaker
-					N_0xd48fe545cd46f857(headDisplayId, 4, 128) -- Alpha
+					--N_0x63bb75abedc1f6a0(headDisplayId, 4, true) -- Speaker
+					--N_0xd48fe545cd46f857(headDisplayId, 4, 128) -- Alpha
 				else
-					N_0x63bb75abedc1f6a0(headDisplayId, 4, false) -- Speaker Off
+					--N_0x63bb75abedc1f6a0(headDisplayId, 4, false) -- Speaker Off
 				end
 			end
 		end

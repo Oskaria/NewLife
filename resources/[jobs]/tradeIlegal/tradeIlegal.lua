@@ -135,6 +135,7 @@ Citizen.CreateThread(function()
                           ShowMsgtime.msg = '~g~ + 1 ~b~Cannabis roulé'
                           ShowMsgtime.time = 150
 
+                          
                           TriggerEvent("player:looseItem", 4, 1)
                           TriggerEvent("player:receiveItem", 5, 1)
                   else

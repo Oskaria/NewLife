@@ -1122,7 +1122,7 @@ function getMainMenu()
 		-- 	lE MENU SELON LA JOB
 		VMenu.AddSep(98, jobsname[User.job])
 
-		VMenu.AddFunc(98, lang.menu.mainmenu.anim, "menuanim:AnimOG", {}, lang.common.access)
+		--VMenu.AddFunc(98, lang.menu.mainmenu.anim, "menuanim:AnimOG", {}, lang.common.access)
 		VMenu.AddFunc(98, lang.menu.mainmenu.reper, "menutel:PhoneOG", {User.telephone}, lang.common.access)
 		VMenu.AddFunc(98, lang.menu.mainmenu.givecash, "vmenu:giveCash", {User.money}, lang.common.access)
 		VMenu.AddFunc(98, lang.menu.mainmenu.givedcash, "vmenu:giveDCash", {User.dirtymoney}, lang.common.access)
