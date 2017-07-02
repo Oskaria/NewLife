@@ -42,6 +42,8 @@ AutoStartResources:
     - ply_docks
     - ply_garages
     - ply_prefecture
+    - carcrash
+    - es_carfixen
 
     - es_afterStart
     #GARDER ES_AFTERSTART DERNIER MERCI LEL
