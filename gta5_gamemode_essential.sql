@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50718
 File Encoding         : 65001
 
-Date: 2017-07-02 02:47:56
+Date: 2017-07-02 03:38:57
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -86,7 +86,7 @@ DEFAULT CHARACTER SET=utf8 COLLATE=utf8_general_ci
 -- Records of coordinates
 -- ----------------------------
 BEGIN;
-INSERT INTO `coordinates` VALUES ('steam:11000010947456d', '-837.2211303710938', '-405.06048583984375', '31.471559524536133');
+INSERT INTO `coordinates` VALUES ('steam:11000010947456d', '979.3524169921875', '-1923.458740234375', '31.134464263916016');
 COMMIT;
 
 -- ----------------------------
@@ -469,7 +469,27 @@ AUTO_INCREMENT=2
 -- Records of users
 -- ----------------------------
 BEGIN;
-INSERT INTO `users` VALUES ('1', 'steam:11000010947456d', 'user', '0', '764686', '5000000', '1', '0', '0', '0', '1', 'Johns', 'Connor', '654-7490', '0');
+INSERT INTO `users` VALUES ('1', 'steam:11000010947456d', 'user', '0', '766186', '5000000', '4', '0', '0', '0', '1', 'Johns', 'Connor', '654-7490', '0');
+COMMIT;
+
+-- ----------------------------
+-- Table structure for vehicle_inventory
+-- ----------------------------
+DROP TABLE IF EXISTS `vehicle_inventory`;
+CREATE TABLE `vehicle_inventory` (
+`plate`  varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL ,
+`item`  int(11) NOT NULL ,
+`quantity`  int(11) NOT NULL 
+)
+ENGINE=InnoDB
+DEFAULT CHARACTER SET=utf8 COLLATE=utf8_general_ci
+
+;
+
+-- ----------------------------
+-- Records of vehicle_inventory
+-- ----------------------------
+BEGIN;
 COMMIT;
 
 -- ----------------------------
