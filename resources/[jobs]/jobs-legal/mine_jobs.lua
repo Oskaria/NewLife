@@ -205,7 +205,7 @@ Citizen.CreateThread(function()
                   ShowMsgtime.time = 250
                   TriggerEvent("vmenu:anim" ,"pickup_object", "pickup_low")
                   Wait(2500)
-                  ShowMsgtime.msg = '+ 1 ~b~Roche'
+                  ShowMsgtime.msg = '~g~ + 1 ~b~Roche'
                   ShowMsgtime.time = 150
                   TriggerEvent("player:receiveItem", 23, 1)
                   chance = chance + 1
@@ -215,7 +215,7 @@ Citizen.CreateThread(function()
                   ShowMsgtime.time = 250
                   TriggerEvent("vmenu:anim" ,"pickup_object", "pickup_low")
                   Wait(2500)
-                  ShowMsgtime.msg = '+ 1 ~b~cuivre'
+                  ShowMsgtime.msg = '~g~ + 1 ~b~cuivre'
                   ShowMsgtime.time = 150
                   TriggerEvent("player:receiveItem", 17, 1)
                   chance = chance + 1
@@ -225,7 +225,7 @@ Citizen.CreateThread(function()
                   ShowMsgtime.time = 250
                   TriggerEvent("vmenu:anim" ,"pickup_object", "pickup_low")
                   Wait(2500)
-                  ShowMsgtime.msg = '+ 1 ~b~fer'
+                  ShowMsgtime.msg = '~g~ + 1 ~b~fer'
                   ShowMsgtime.time = 150
                   TriggerEvent("player:receiveItem", 18, 1)
                   chance = chance + 1
@@ -235,7 +235,7 @@ Citizen.CreateThread(function()
                   ShowMsgtime.time = 250
                   TriggerEvent("vmenu:anim" ,"pickup_object", "pickup_low")
                   Wait(2500)
-                  ShowMsgtime.msg = '+ 1 ~b~Diamant'
+                  ShowMsgtime.msg = '~g~ + 1 ~b~Diamant'
                   ShowMsgtime.time = 150
                   TriggerEvent("player:receiveItem", 19, 1)
                   chance = 1
@@ -292,41 +292,41 @@ Citizen.CreateThread(function()
                 -- end)
                 Wait(100)
                 if roche ~= 0 and (roche_trait+cuivre_trait+fer_trait+diams_trait) < 30 then
-                  ShowMsgtime.msg = 'Traitement ~b~du minerai'
+                  ShowMsgtime.msg = '~g~ Traitement ~b~du minerai'
                   ShowMsgtime.time = 250
                   TriggerEvent("vmenu:anim" ,"pickup_object", "pickup_low")
                   Wait(2500)
-                  ShowMsgtime.msg = '+ 1 ~b~Roche traitée'
+                  ShowMsgtime.msg = '~g~ + 1 ~b~Roche traitée'
                   ShowMsgtime.time = 150
 
                   TriggerEvent("player:looseItem", 23, 1)
                   TriggerEvent("player:receiveItem", 24, 1)
                 elseif cuivre ~= 0 and (roche_trait+cuivre_trait+fer_trait+diams_trait) < 30 then
-                  ShowMsgtime.msg = 'Traitement ~b~du minerai'
+                  ShowMsgtime.msg = '~g~ Traitement ~b~du minerai'
                   ShowMsgtime.time = 250
                   TriggerEvent("vmenu:anim" ,"pickup_object", "pickup_low")
                   Wait(2500)
-                  ShowMsgtime.msg = '+ 1 ~b~Cuivre traité'
+                  ShowMsgtime.msg = '~g~ + 1 ~b~Cuivre traité'
                   ShowMsgtime.time = 150
 
                   TriggerEvent("player:looseItem", 17, 1)
                   TriggerEvent("player:receiveItem", 20, 1)
                 elseif fer ~= 0 and (roche_trait+cuivre_trait+fer_trait+diams_trait) < 30 then
-                  ShowMsgtime.msg = 'Traitement ~b~du minerai'
+                  ShowMsgtime.msg = '~g~ Traitement ~b~du minerai'
                   ShowMsgtime.time = 250
                   TriggerEvent("vmenu:anim" ,"pickup_object", "pickup_low")
                   Wait(2500)
-                  ShowMsgtime.msg = '+ 1 ~b~Fer traité'
+                  ShowMsgtime.msg = '~g~ + 1 ~b~Fer traité'
                   ShowMsgtime.time = 150
 
                   TriggerEvent("player:looseItem", 18, 1)
                   TriggerEvent("player:receiveItem", 21, 1)
                 elseif diams ~= 0 and (roche_trait+cuivre_trait+fer_trait+diams_trait) < 30 then
-                  ShowMsgtime.msg = 'Traitement ~b~du minerai'
+                  ShowMsgtime.msg = '~g~ Traitement ~b~du minerai'
                   ShowMsgtime.time = 250
                   TriggerEvent("vmenu:anim" ,"pickup_object", "pickup_low")
                   Wait(2500)
-                  ShowMsgtime.msg = '+ 1 ~b~Diams traité'
+                  ShowMsgtime.msg = '~g~ + 1 ~b~Diams traité'
                   ShowMsgtime.time = 150
 
                   TriggerEvent("player:looseItem", 19, 1)
@@ -369,24 +369,24 @@ Citizen.CreateThread(function()
                 -- end)
                 Wait(100)
                 if roche ~= 0 then
-                  ShowMsgtime.msg = 'Vendre ~b~minerai'
+                  ShowMsgtime.msg = '~g~ Vendre ~b~minerai'
                   ShowMsgtime.time = 250
                   Wait(2500)
-                  ShowMsgtime.msg = '1 roche taillé vendu +' .. ' ' .. PrixRoche .. '$'
+                  ShowMsgtime.msg = '~g~ 1 roche taillé vendu +' .. ' ' .. PrixRoche .. '$'
                   TriggerEvent("inventory:sell",0, 1, 24, PrixRoche, "")
                   ShowMsgtime.time = 150
                 elseif cuivre ~= 0 then
-                  ShowMsgtime.msg = 'Vendre ~b~minerai'
+                  ShowMsgtime.msg = '~g~ Vendre ~b~minerai'
                   ShowMsgtime.time = 250
                   Wait(2500)
-                  ShowMsgtime.msg = '1 lingot de cuivre vendu +' .. ' ' .. PrixCuivre .. '$'
+                  ShowMsgtime.msg = '~g~ 1 lingot de cuivre vendu +' .. ' ' .. PrixCuivre .. '$'
                   TriggerEvent("inventory:sell",0, 1, 20, PrixCuivre, "")
                   ShowMsgtime.time = 150
                 elseif fer ~= 0 then
-                  ShowMsgtime.msg = 'Vendre ~b~minerai'
+                  ShowMsgtime.msg = '~g~ Vendre ~b~minerai'
                   ShowMsgtime.time = 250
                   Wait(2500)
-                  ShowMsgtime.msg = '1 lingot de fer vendu +' .. ' ' .. PrixFer .. '$'
+                  ShowMsgtime.msg = '~g~ 1 lingot de fer vendu +' .. ' ' .. PrixFer .. '$'
                   TriggerEvent("inventory:sell",0, 1, 21, PrixFer, "")
                   ShowMsgtime.time = 150
                 else
@@ -422,10 +422,10 @@ Citizen.CreateThread(function()
                 -- end)
                 Wait(100)
                 if diams ~= 0 then
-                  ShowMsgtime.msg = 'Vendre ~b~ du diamant'
+                  ShowMsgtime.msg = '~g~ Vendre ~b~ du diamant'
                   ShowMsgtime.time = 250
                   Wait(2500)
-                  ShowMsgtime.msg = '1 diamant vendu + ' .. ' ' .. PrixDiams .. '$'
+                  ShowMsgtime.msg = '~g~ 1 diamant vendu + ' .. ' ' .. PrixDiams .. '$'
                   ShowMsgtime.time = 150
                   TriggerEvent("inventory:sell",0, 1, 22, PrixDiams, "")
                   money = money + PrixDiams
@@ -456,7 +456,6 @@ function AfficherBlip()
 
   SetBlipSprite(BlipMine, 78)
   SetBlipColour(BlipMine, 2)
-  SetBlipScale(BlipMine, 0.8)
   SetBlipAsShortRange(BlipMine, true)
   BeginTextCommandSetBlipName("STRING")
   AddTextComponentString('Mine')
@@ -466,7 +465,6 @@ function AfficherBlip()
 
   SetBlipSprite(BlipTraitement, 233)
   SetBlipColour(BlipTraitement, 2)
-  SetBlipScale(BlipTraitement, 0.8)
   SetBlipAsShortRange(BlipTraitement, true)
   BeginTextCommandSetBlipName("STRING")
   AddTextComponentString('Traitement de minéraux')
@@ -476,7 +474,6 @@ function AfficherBlip()
 
   SetBlipSprite(BlipVenteMine, 277)
   SetBlipColour(BlipVenteMine, 2)
-  SetBlipScale(BlipTraitement, 0.8)
   SetBlipAsShortRange(BlipVenteMine, true)
   BeginTextCommandSetBlipName("STRING")
   AddTextComponentString('Acheteur de minéraux')
@@ -486,7 +483,6 @@ function AfficherBlip()
 
   SetBlipSprite(BlipVenteDiams, 277)
   SetBlipColour(BlipVenteDiams, 2)
-  SetBlipScale(BlipTraitement, 0.8)
   SetBlipAsShortRange(BlipVenteDiams, true)
   BeginTextCommandSetBlipName("STRING")
   AddTextComponentString('Acheteur de diamant')
