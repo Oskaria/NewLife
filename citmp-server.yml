@@ -22,7 +22,7 @@ AutoStartResources:
     - salaire
     - banking
     - foodhud
-    #- lscustoms
+    - lscustoms
     - tradeIlegal
     - interiors
     - mine

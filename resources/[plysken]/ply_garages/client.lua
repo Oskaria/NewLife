@@ -26,7 +26,6 @@ local garages = {
     {name="Garage", colour=3, id=357, x=-334.685, y=289.773, z=84.705},
     {name="Garage", colour=3, id=357, x=-55.272, y=-1838.71, z=25.442},
     {name="Garage", colour=3, id=357, x=126.434, y=6610.04, z=30.750},
-    {name="Garage", colour=3, id=357, x=-956.405, y=-2704.759, z=13.831}
 }
 
 garageSelected = { {x=nil, y=nil, z=nil}, }
@@ -99,7 +98,7 @@ function MenuGarage()
     Menu.addButton(lang_string.menu1,"RentrerVehicule",nil)
     Menu.addButton(lang_string.menu2,"ListeVehicule",nil)
     Menu.addButton(lang_string.menu11,"UpdateVehicule",nil)
-    Menu.addButton(lang_string.menu3,"CloseMenu",nil)
+    Menu.addButton(lang_string.menu3,"CloseMenu",nil) 
 end
 
 function RentrerVehicule()
@@ -111,7 +110,7 @@ function RentrerVehicule()
       TriggerServerEvent('ply_garages:CheckForVeh', plate)
     else
       drawNotification(lang_string.text6)
-    end
+    end   
   end)
   CloseMenu()
 end
@@ -122,7 +121,7 @@ function ListeVehicule()
     ClearMenu()
     for ind, value in pairs(VEHICLES) do
             Menu.addButton(tostring(value.vehicle_name) .. " : " .. tostring(value.vehicle_state), "OptionVehicle", value.id)
-    end
+    end    
     Menu.addButton(lang_string.menu7,"MenuGarage",nil)
 end
 
@@ -247,7 +246,7 @@ function drawNotification(text)
 end
 
 function CloseMenu()
-    Menu.hidden = true
+    Menu.hidden = true    
     TriggerServerEvent("ply_garages:CheckGarageForVeh")
 end
 
@@ -292,9 +291,9 @@ Citizen.CreateThread(function()
           garageSelected.y = garage.y
           garageSelected.z = garage.z
           MenuGarage()
-          Menu.hidden = not Menu.hidden
+          Menu.hidden = not Menu.hidden 
         end
-        Menu.renderGUI()
+        Menu.renderGUI() 
       end
     end
   end
@@ -304,12 +303,12 @@ Citizen.CreateThread(function()
   while true do
     local near = false
     Citizen.Wait(0)
-    for _, garage in pairs(garages) do
-      if (GetDistanceBetweenCoords(garage.x, garage.y, garage.z, GetEntityCoords(LocalPed())) < 3 and near ~= true) then
-        near = true
+    for _, garage in pairs(garages) do    
+      if (GetDistanceBetweenCoords(garage.x, garage.y, garage.z, GetEntityCoords(LocalPed())) < 3 and near ~= true) then 
+        near = true             
       end
     end
-    if near == false then
+    if near == false then 
       Menu.hidden = true;
     end
   end
@@ -321,7 +320,6 @@ Citizen.CreateThread(function()
     SetBlipSprite(item.blip, item.id)
     SetBlipAsShortRange(item.blip, true)
     SetBlipColour(item.blip, item.colour)
-    SetBlipScale(blip, 0.8)
     BeginTextCommandSetBlipName("STRING")
     AddTextComponentString(item.name)
     EndTextCommandSetBlipName(item.blip)
@@ -334,7 +332,6 @@ Citizen.CreateThread(function()
   local blip = AddBlipForCoord(pos[1],pos[2],pos[3])
   SetBlipSprite(blip,207)
   SetBlipColour(blip, 3)
-  SetBlipScale(blip, 0.8)
   BeginTextCommandSetBlipName("STRING")
   AddTextComponentString(ventenamefr)
   EndTextCommandSetBlipName(blip)
@@ -354,7 +351,7 @@ Citizen.CreateThread(function()
           TriggerServerEvent('ply_garages:CheckForSelVeh', platecaissei)
         else
           drawNotification(lang_string.text6)
-        end
+        end   
       end
     end
   end
@@ -423,7 +420,7 @@ AddEventHandler('ply_garages:SpawnVehicle', function(vehicle, plate, state, prim
     Citizen.Wait(1000)
     local caisseo = GetClosestVehicle(garageSelected.x, garageSelected.y, garageSelected.z, 3.000, 0, 70)
     if DoesEntityExist(caisseo) then
-      drawNotification(lang_string.text1)
+      drawNotification(lang_string.text1) 
     else
       if state == lang_string.state1 then
         drawNotification(lang_string.text2)
@@ -469,17 +466,17 @@ AddEventHandler('ply_garages:SpawnVehicle', function(vehicle, plate, state, prim
         SetVehicleMod(veh, 16, mods16)
         if turbo == "on" then
           ToggleVehicleMod(veh, 18, true)
-        else
+        else            
           ToggleVehicleMod(veh, 18, false)
         end
         if tiresmoke == "on" then
           ToggleVehicleMod(veh, 20, true)
-        else
+        else            
           ToggleVehicleMod(veh, 20, false)
         end
         if xenon == "on" then
           ToggleVehicleMod(veh, 22, true)
-        else
+        else            
           ToggleVehicleMod(veh, 22, false)
         end
 	SetVehicleWheelType(veh, tonumber(wheeltype))
@@ -517,8 +514,8 @@ AddEventHandler('ply_garages:SpawnVehicle', function(vehicle, plate, state, prim
         --end
         SetVehicleWindowTint(veh,tonumber(windowtint))
         TaskWarpPedIntoVehicle(GetPlayerPed(-1),veh,-1)
-        SetEntityInvincible(veh, false)
-        drawNotification(lang_string.text3)
+        SetEntityInvincible(veh, false) 
+        drawNotification(lang_string.text3)        
         TriggerServerEvent('ply_garages:SetVehOut', vehicle, plate)
           TriggerServerEvent("ply_garages:CheckGarageForVeh")
       end

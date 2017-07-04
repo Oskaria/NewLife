@@ -21,7 +21,7 @@ function configLang(lang)
 	local lang = lang
 	if lang == "FR" then
 		lang_string = {
-			--menu1 = "Acheter un permis",
+			menu1 = "Acheter un permis",
 			menu2 = "Enregistrer un véhicule",
 			menu3 = "Fermer",
 			menu4 = "Permis",
@@ -36,7 +36,7 @@ function configLang(lang)
 
 	elseif lang == "EN" then
 		lang_string = {
-			--menu1 = "Buy a license",
+			menu1 = "Buy a license",
 			menu2 = "Register a vehicle",
 			menu3 = "Close",
 			menu4 = "Licenses",
@@ -45,7 +45,7 @@ function configLang(lang)
 			text1 = "This is not the right vehicle",
 			text2 = "No vehicles present",
 			text3 = "Vehicle registered",
-			text4 = "This license is already purchased",
+			text4 = "This license is already purchased", 
 			text5 = "License purchased"
 	}
 	end
@@ -55,9 +55,9 @@ function MenuPrefecture()
     ped = GetPlayerPed(-1);
     MenuTitle = "Prefecture"
     ClearMenu()
-    --Menu.addButton(lang_string.menu1,"AcheterPermis",nil)
+    Menu.addButton(lang_string.menu1,"AcheterPermis",nil)
     Menu.addButton(lang_string.menu2,"EnregistrerVehicule",nil)
-    Menu.addButton(lang_string.menu3,"CloseMenu",nil)
+    Menu.addButton(lang_string.menu3,"CloseMenu",nil) 
 end
 
 function EnregistrerVehicule()
@@ -71,13 +71,13 @@ function AcheterPermis()
     ClearMenu()
     for ind, value in pairs(LICENCES) do
             Menu.addButton(tostring(value.name) .. " : " .. tostring(value.price), "OptionPermis", value.id)
-    end
+    end    
     Menu.addButton(lang_string.menu5,"MenuPrefecture",nil)
 end
 
 function OptionPermis(licID)
 	local licID = licID
-	TriggerServerEvent('ply_prefecture:CheckForLicences', licID)
+	TriggerServerEvent('ply_prefecture:CheckForLicences', licID)	
 	CloseMenu()
 end
 
@@ -88,7 +88,7 @@ function drawNotification(text)
 end
 
 function CloseMenu()
-    Menu.hidden = true
+    Menu.hidden = true    
     TriggerServerEvent("ply_prefecture:GetLicences")
 end
 
@@ -139,7 +139,7 @@ AddEventHandler("ply_prefecture:CheckForRealVeh", function(personalvehicle)
 		local brutmodel = personalvehicle
 		local personalvehicle = string.lower(personalvehicle)
 		local caisse = GetClosestVehicle(prefecture_location[1],prefecture_location[2],prefecture_location[3], 5.000, 0, 70)
-		SetEntityAsMissionEntity(caisse, true, true)
+		SetEntityAsMissionEntity(caisse, true, true)		
 		if DoesEntityExist(caisse) then
 			local vname = GetDisplayNameFromVehicleModel(GetEntityModel(caisse))
 			local vname1 = GetLabelText(vname)
@@ -148,10 +148,10 @@ AddEventHandler("ply_prefecture:CheckForRealVeh", function(personalvehicle)
 			local vname1 = vname1.gsub(vname1, "%s+", "")
 			local vname2 = string.lower(vname)
 			local vname2 = vname2:gsub("%s+", "")
-			local vname2 = vname2.gsub(vname2, "%s+", "")
+			local vname2 = vname2.gsub(vname2, "%s+", "")			
 			if personalvehicle ~= vname1 then
 				checkvname1 = false
-			end
+			end					
 			if vname2 == "cogcabri" then
 				vname2 = "cogcabrio"
 			end
@@ -168,7 +168,7 @@ AddEventHandler("ply_prefecture:CheckForRealVeh", function(personalvehicle)
 				local extra_colors = table.pack(GetVehicleExtraColours(caisse))
 				GetVehicleExtraColours(caisse,extra_colors[1],extra_colors[2])
 				local primarycolor = GetVehicleColours(caisse,colors[1])
-				local secondarycolor = GetVehicleColours(caisse,colors[2])
+				local secondarycolor = GetVehicleColours(caisse,colors[2])	
 				local pearlescentcolor = GetVehicleExtraColours(caisse,extra_colors[1])
 				local wheelcolor = GetVehicleExtraColours(caisse,extra_colors[2])
 
@@ -176,7 +176,7 @@ AddEventHandler("ply_prefecture:CheckForRealVeh", function(personalvehicle)
 			end
 		else
 			drawNotification(lang_string.text2)
-		end
+		end   
 	end)
 end)
 
@@ -201,8 +201,7 @@ Citizen.CreateThread(function()
 	pos = prefecture_location
 	local blip = AddBlipForCoord(pos[1],pos[2],pos[3])
 	SetBlipSprite(blip,267)
-	SetBlipColour(blip,3)
-	SetBlipScale(blip, 0.8)
+	SetBlipColour(blip,1)
 	BeginTextCommandSetBlipName("STRING")
 	AddTextComponentString('Prefecture')
 	EndTextCommandSetBlipName(blip)
@@ -212,7 +211,7 @@ Citizen.CreateThread(function()
 		Wait(0)
 		DrawMarker(1,prefecture_location[1],prefecture_location[2],prefecture_location[3],0,0,0,0,0,0,4.001,4.0001,0.5001,0,155,255,200,0,0,0,0)
 		if GetDistanceBetweenCoords(prefecture_location[1],prefecture_location[2],prefecture_location[3],GetEntityCoords(LocalPed())) < 5 and IsPedInAnyVehicle(LocalPed(), true) == false then
-			drawTxt(lang_string.menu10,0,1,0.5,0.8,0.6,255,255,255,255)
+			drawTxt(lang_string.menu10,0,1,0.5,0.8,0.6,255,255,255,255)		
 			if IsControlJustPressed(1, 86) then
 				MenuPrefecture()
 				Menu.hidden = not Menu.hidden
