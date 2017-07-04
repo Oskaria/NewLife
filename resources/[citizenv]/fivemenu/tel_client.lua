@@ -18,6 +18,8 @@ AddEventHandler("menutel:PhoneOG", function(target, mytel)
 		VMenu.AddFunc(98, "Retour", "vmenu:MainMenuOG", {}, "Retour")
 		VMenu.AddFunc(98, "Ajouter un contact", "tel:add", {}, "Valider")
 		VMenu.AddFunc(98, "Appeler la police", "tel:call", {"911"}, "Appeller")
+		VMenu.AddFunc(98, "Conctacter un Taxi", "tel:taxi", {"323"}, "Appeller")
+		VMenu.AddFunc(98, "Conctacter un Depanneur", "tel:dep", {"222"}, "Appeller")
 		for ind, value in pairs(PHONEBOOK) do
 			VMenu.AddFunc(98, value.nom .. " " .. value.prenom .. " " .. tostring(ind), "tel:call", {ind}, "Appeler: " .. tostring(ind))
 		end
@@ -49,6 +51,32 @@ AddEventHandler("tel:call", function(target, tel, sendTo)
 	if tel == "911" then
 		local plyPos = GetEntityCoords(GetPlayerPed(-1), true)
 		TriggerServerEvent("call:makeCall", "police", {x=plyPos.x,y=plyPos.y,z=plyPos.z})
+	else
+		DisplayOnscreenKeyboard(true, "FMMC_KEY_TIP8", "", "", "", "", "", 120)
+		teldest = tel
+		iddest = sendTo
+		confirmed = 1
+	end
+end)
+
+AddEventHandler("tel:taxi", function(target, tel, sendTo)
+	TriggerEvent("vmenu:closeMenu")
+	if tel == "323" then
+		local plyPos = GetEntityCoords(GetPlayerPed(-1), true)
+		TriggerServerEvent("call:makeCall", "taxi", {x=plyPos.x,y=plyPos.y,z=plyPos.z})
+	else
+		DisplayOnscreenKeyboard(true, "FMMC_KEY_TIP8", "", "", "", "", "", 120)
+		teldest = tel
+		iddest = sendTo
+		confirmed = 1
+	end
+end)
+
+AddEventHandler("tel:dep", function(target, tel, sendTo)
+	TriggerEvent("vmenu:closeMenu")
+	if tel == "222" then
+		local plyPos = GetEntityCoords(GetPlayerPed(-1), true)
+		TriggerServerEvent("call:makeCall", "Depanneur", {x=plyPos.x,y=plyPos.y,z=plyPos.z})
 	else
 		DisplayOnscreenKeyboard(true, "FMMC_KEY_TIP8", "", "", "", "", "", 120)
 		teldest = tel

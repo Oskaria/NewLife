@@ -7,13 +7,13 @@ local inService = {
     ["police"] = {},
     ["medic"] = {},
     ["taxi"] = {},
-    ["mécanicien"] = {}, 
+    ["Depanneur"] = {},
 }
 local callActive = {
     ["police"] = {taken = false},
     ["medic"] = {taken = false},
     ["taxi"] = {taken = false},
-    ["mécanicien"] = {taken = false},
+    ["Depanneur"] = {taken = false},
 }
 local timing = 1500
 
